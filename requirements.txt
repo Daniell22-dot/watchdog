@@ -1,0 +1,4 @@
+httpx>=0.27
+sqlalchemy>=2.0 (optional, for init-db)
+nacl>=1.6.0 (for Ed25519 signature verification, optional)
+pytest>=7.4 (for tests, optional)

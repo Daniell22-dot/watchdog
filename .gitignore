@@ -1,0 +1,17 @@
+# Ignore state database and generated reports
+state.sqlite
+reports/
+
+# Ignore env files with real secrets
+*.env
+.env.local
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore office files
+*.docx
+venv/
+*.sqlite
