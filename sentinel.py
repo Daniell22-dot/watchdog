@@ -23,7 +23,7 @@ from config import settings
 from baseline import record_baseline
 from beacon import verify_beacon
 from report import render_digest
-from canary import run_canary, add_sentinel_subcommands
+from canary import run_canary
 
 # ---------------------------------------------------------------------------
 # Argument parsing
@@ -34,16 +34,16 @@ parser = argparse.ArgumentParser(description="Ekshop Site Sentinel")
 subparsers = parser.add_subparsers(dest="command")
 
 # init-db subcommand
-parser.add_parser("init-db", help="initialise SQLite state database")
+subparsers.add_parser("init-db", help="initialise SQLite state database")
 
 # baseline subcommand
-parser.add_parser("baseline", help="record a fresh baseline")
+subparsers.add_parser("baseline", help="record a fresh baseline")
 
 # run subcommand
-parser.add_parser("run", help="run full check + report")
+subparsers.add_parser("run", help="run full check + report")
 
 # canary subcommand
-parser.add_parser("canary", help="run the honeytoken admin canary check")
+subparsers.add_parser("canary", help="run the honeytoken admin canary check")
 
 
 # ---------------------------------------------------------------------------
